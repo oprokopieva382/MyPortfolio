@@ -14,7 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const NavBar = () => {
-  const navItems = ["About me", "My work", "Contact", "Resume"];
+  const navItems = ["About", "Projects", "Contact me", "Resume"];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -24,7 +24,7 @@ export const NavBar = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor: "transparent" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -35,12 +35,30 @@ export const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff", ml: 2 }}>
-                {item}
-              </Button>
-            ))}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center", // Center the items horizontally
+              flexGrow: 1, // Take up remaining space
+            }}
+          >
+            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item}
+                  sx={{
+                    color: "#fff",
+                    backgroundColor: "rgba(88, 88, 88, 0.1)",
+                    ml: 2,
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    },
+                  }}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
