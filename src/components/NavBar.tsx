@@ -12,9 +12,10 @@ import {
   Toolbar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { AudioPlayer } from "./AudioPlayer";
 
 export const NavBar = () => {
-  const navItems = ["About", "Projects", "Contact me", "Resume"];
+  const navItems = ["About", "Projects", "Contact me"];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -24,7 +25,10 @@ export const NavBar = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "transparent" }}>
+      <AppBar
+        component="nav"
+        sx={{ backgroundColor: "transparent", position: "fixed" }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -35,17 +39,22 @@ export const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
+          <Box sx={{marginLeft: "20px"}}>
+           <AudioPlayer />
+          </Box>
+
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center", // Center the items horizontally
-              flexGrow: 1, // Take up remaining space
+              justifyContent: "center",
+              flexGrow: 1,
             }}
           >
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {navItems.map((item) => (
                 <Button
                   key={item}
+                  onClick={() => console.log("click")}
                   sx={{
                     color: "#fff",
                     backgroundColor: "rgba(88, 88, 88, 0.1)",
