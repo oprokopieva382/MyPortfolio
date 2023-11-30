@@ -1,14 +1,12 @@
-import "./App.css";
+import { About } from "./components/About";
+
 import { NavBar } from "./components/NavBar";
 
-export const App=()=> {
- 
-
+export const App = () => {
   return (
     <>
-    <NavBar/>
-     hello
+      <NavBar />
+      <About />
     </>
   );
-}
-
+};
