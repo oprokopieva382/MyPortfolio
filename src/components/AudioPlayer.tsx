@@ -25,6 +25,7 @@ export const AudioPlayer = () => {
 
    useEffect(() => {
      const audioElement = new Audio("/src/assets/audio/Lo-Fi-Chillhop.mp3");
+     audioElement.loop = checked;
 
      const playAudio = () => {
        audioElement
