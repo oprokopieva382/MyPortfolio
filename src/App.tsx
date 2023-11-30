@@ -1,4 +1,4 @@
-import { About } from "./components/About";
+import { About } from "./components/pages/About";
 
 import { NavBar } from "./components/NavBar";
 
