@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -7,15 +8,13 @@ import {
   Drawer,
   IconButton,
   List,
-  ListItem,
-  ListItemText,
   Toolbar,
+  ListItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AudioPlayer } from "./AudioPlayer";
 
 export const NavBar = () => {
-  const navItems = ["About", "Projects", "Contact me"];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -39,8 +38,8 @@ export const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{marginLeft: "20px"}}>
-           <AudioPlayer />
+          <Box sx={{ marginLeft: "20px" }}>
+            <AudioPlayer />
           </Box>
 
           <Box
@@ -51,9 +50,8 @@ export const NavBar = () => {
             }}
           >
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-              {navItems.map((item) => (
+              <NavLink to="/">
                 <Button
-                  key={item}
                   onClick={() => console.log("click")}
                   sx={{
                     color: "#fff",
@@ -64,9 +62,39 @@ export const NavBar = () => {
                     },
                   }}
                 >
-                  {item}
+                  About
                 </Button>
-              ))}
+              </NavLink>
+              <NavLink to="/projects">
+                <Button
+                  onClick={() => console.log("click")}
+                  sx={{
+                    color: "#fff",
+                    backgroundColor: "rgba(88, 88, 88, 0.1)",
+                    ml: 2,
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    },
+                  }}
+                >
+                  Projects
+                </Button>
+              </NavLink>
+              <NavLink to="/contact">
+                <Button
+                  onClick={() => console.log("click")}
+                  sx={{
+                    color: "#fff",
+                    backgroundColor: "rgba(88, 88, 88, 0.1)",
+                    ml: 2,
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    },
+                  }}
+                >
+                  Contact
+                </Button>
+              </NavLink>
             </Box>
           </Box>
         </Toolbar>
@@ -77,11 +105,21 @@ export const NavBar = () => {
         onClose={handleMobileMenuToggle}
       >
         <List>
-          {navItems.map((item) => (
-            <ListItem button key={item} onClick={handleMobileMenuToggle}>
-              <ListItemText primary={item} />
+          <NavLink to="/">
+            <ListItem button onClick={handleMobileMenuToggle}>
+              About
             </ListItem>
-          ))}
+          </NavLink>
+          <NavLink to="/projects">
+            <ListItem button onClick={handleMobileMenuToggle}>
+              Projects
+            </ListItem>
+          </NavLink>
+          <NavLink to="/contact">
+            <ListItem button onClick={handleMobileMenuToggle}>
+              Contact
+            </ListItem>
+          </NavLink>
         </List>
       </Drawer>
     </Box>

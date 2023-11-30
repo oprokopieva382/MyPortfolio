@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import video from "../assets/video/aboutBackground.mp4";
+import video from "../../assets/video/aboutBackground.mp4";
 
-export const About = () => {
+export const Home = () => {
   return (
     <>
       <Box>
