@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import video from "../../assets/video/aboutBackground.mp4";
 
 export const Home = () => {
@@ -29,7 +29,27 @@ export const Home = () => {
             color: "white",
           }}
         >
-          <h1>Yo</h1>
+          <Box
+            sx={{
+              maxWidth: "50%",
+              minWidth: "500px",
+              backgroundColor: "rgba(43, 42, 42, 0.5)",
+              borderRadius: "8px",
+              padding: 10,
+            }}
+          >
+            <Typography sx={{ fontSize: "20px" }}>It's me,</Typography>
+            <Typography sx={{ fontSize: "40px" }}>Oksana</Typography>
+            <Typography sx={{ fontSize: "27px" }}>
+              Full Stack Developer (MERN)
+            </Typography>
+            <Typography sx={{marginTop: "3%", fontSize: 17}}>
+              Believe, it's so important to keep work and rest in a
+              balance, that is why live yoga lifestyle and in a free time
+              enjoying exploring the Nature, so if you can't find me here, you
+              definitely find me there🤍
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
