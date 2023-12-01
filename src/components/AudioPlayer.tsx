@@ -71,7 +71,6 @@ export const AudioPlayer = () => {
       )}
 
       <GreenSwitch
-        defaultChecked
         checked={checked}
         onChange={handleChange}
         inputProps={{ "aria-label": "controlled" }}

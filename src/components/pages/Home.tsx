@@ -28,7 +28,7 @@ export const Home = () => {
             justifyContent: "center",
             alignItems: "center",
             color: "white",
-          }}
+            }}
         >
           <Box
             sx={{
