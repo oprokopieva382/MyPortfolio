@@ -14,6 +14,7 @@ export const Home = () => {
             width: "100%",
             height: "100vh",
             objectFit: "cover",
+            display: "block",
           }}
         />
         <Box
@@ -43,11 +44,11 @@ export const Home = () => {
             <Typography sx={{ fontSize: "27px" }}>
               Full Stack Developer (MERN)
             </Typography>
-            <Typography sx={{marginTop: "3%", fontSize: 17}}>
-              Believe, it's so important to keep work and rest in a
-              balance, that is why live yoga lifestyle and in a free time
-              enjoying exploring the Nature, so if you can't find me here, you
-              definitely find me there🤍
+            <Typography sx={{ marginTop: "3%", fontSize: 17 }}>
+              Believe, it's so important to keep work and rest in a balance,
+              that is why live yoga lifestyle and in a free time enjoying
+              exploring the Nature, so if you can't find me here, you definitely
+              find me there🤍
             </Typography>
           </Box>
         </Box>

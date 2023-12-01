@@ -27,9 +27,9 @@ export const NavBar = () => {
         color="primary"
         sx={{
           margin: 1,
-          backgroundColor: "rgba(49, 49, 49, 0.1)",
+          backgroundColor: "rgba(156, 204, 101, 0.2)",
           "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backgroundColor: "rgba(156, 204, 101, 0.6)",
           },
         }}
       >
@@ -83,7 +83,7 @@ export const NavBar = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "#bebdbd",
+            backgroundColor: "rgba(156, 204, 101, 0.6)",
             height: "100%",
             alignItems: "center",
           }}
