@@ -7,9 +7,8 @@ import {
   CssBaseline,
   Drawer,
   IconButton,
-  List,
-  Toolbar,
   ListItem,
+  Toolbar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AudioPlayer } from "./AudioPlayer";
@@ -20,6 +19,24 @@ export const NavBar = () => {
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const renderNavLink = (to: string, label: string) => (
+    <NavLink to={to}  style={{ textDecoration: "none" }}>
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{
+          margin: 1,
+          backgroundColor: "rgba(49, 49, 49, 0.1)",
+          "&:hover": {
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+          },
+        }}
+      >
+        {label}
+      </Button>
+    </NavLink>
+  );
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -50,51 +67,9 @@ export const NavBar = () => {
             }}
           >
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-              <NavLink to="/">
-                <Button
-                  onClick={() => console.log("click")}
-                  sx={{
-                    color: "#fff",
-                    backgroundColor: "rgba(88, 88, 88, 0.1)",
-                    ml: 2,
-                    "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    },
-                  }}
-                >
-                  About
-                </Button>
-              </NavLink>
-              <NavLink to="/projects">
-                <Button
-                  onClick={() => console.log("click")}
-                  sx={{
-                    color: "#fff",
-                    backgroundColor: "rgba(88, 88, 88, 0.1)",
-                    ml: 2,
-                    "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    },
-                  }}
-                >
-                  Projects
-                </Button>
-              </NavLink>
-              <NavLink to="/contact">
-                <Button
-                  onClick={() => console.log("click")}
-                  sx={{
-                    color: "#fff",
-                    backgroundColor: "rgba(88, 88, 88, 0.1)",
-                    ml: 2,
-                    "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    },
-                  }}
-                >
-                  Contact
-                </Button>
-              </NavLink>
+              {renderNavLink("/", "About")}
+              {renderNavLink("/projects", "Projects")}
+              {renderNavLink("/contact", "Contact")}
             </Box>
           </Box>
         </Toolbar>
@@ -104,23 +79,40 @@ export const NavBar = () => {
         open={mobileMenuOpen}
         onClose={handleMobileMenuToggle}
       >
-        <List>
-          <NavLink to="/">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "#bebdbd",
+            height: "100%",
+            alignItems: "center"
+          }}
+        >
+          <NavLink
+            to="/"
+            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
+          >
             <ListItem button onClick={handleMobileMenuToggle}>
               About
             </ListItem>
           </NavLink>
-          <NavLink to="/projects">
+          <NavLink
+            to="/projects"
+            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
+          >
             <ListItem button onClick={handleMobileMenuToggle}>
               Projects
             </ListItem>
           </NavLink>
-          <NavLink to="/contact">
+          <NavLink
+            to="/contact"
+            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
+          >
             <ListItem button onClick={handleMobileMenuToggle}>
               Contact
             </ListItem>
           </NavLink>
-        </List>
+        </Box>
       </Drawer>
     </Box>
   );
