@@ -21,7 +21,7 @@ export const NavBar = () => {
   };
 
   const renderNavLink = (to: string, label: string) => (
-    <NavLink to={to}  style={{ textDecoration: "none" }}>
+    <NavLink to={to} style={{ textDecoration: "none" }}>
       <Button
         variant="contained"
         color="primary"
@@ -85,12 +85,17 @@ export const NavBar = () => {
             flexDirection: "column",
             backgroundColor: "#bebdbd",
             height: "100%",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <NavLink
             to="/"
-            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
+            style={{
+              textDecoration: "none",
+              color: "#fff",
+              width: "100%",
+              padding: "10px 0",
+            }}
           >
             <ListItem button onClick={handleMobileMenuToggle}>
               About
