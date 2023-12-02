@@ -3,9 +3,11 @@ import vibeTogether from "../../assets/img/vibeTogether.png";
 import weatherTracker from "../../assets/img/weather.png";
 import crownClothing from "../../assets/img/crownClothing.png";
 import todoList from "../../assets/img/todoListApp.png";
-// import { ProjectCard } from "../ProjectCard";
-import chillOffice from "../../assets/img/chillOffice.jpeg"
 import { uid } from "uid";
+import { ProjectCard } from "../ProjectCard";
+import { Box, Grid } from "@mui/material";
+import { ChillOfficeBox} from "../../style/ProjectStyle";
+
 
 export const Projects = () => {
   const projects = [
@@ -42,17 +44,29 @@ export const Projects = () => {
   ];
 
   return (
-    <>
-      <img
-        src={chillOffice}
-        alt="chillOffice"
-        style={{
-          width: "100%",
-          height: "100vh",
-          objectFit: "cover",
-          display: "block",
-        }}
-      />
-    </>
+    <Box>
+      <ChillOfficeBox />
+      <Grid container justifyContent="center">
+        {projects.map((project) => (
+          <Grid
+            key={project.id}
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            sx={{
+              marginLeft: 15,
+            }}
+          >
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              src={project.src}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };

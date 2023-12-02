@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -21,7 +21,7 @@ export const NavBar = () => {
   };
 
   const renderNavLink = (to: string, label: string) => (
-    <NavLink to={to} style={{ textDecoration: "none" }}>
+    <Link to={to} style={{ textDecoration: "none" }}>
       <Button
         variant="contained"
         color="primary"
@@ -35,7 +35,7 @@ export const NavBar = () => {
       >
         {label}
       </Button>
-    </NavLink>
+    </Link>
   );
 
   return (
