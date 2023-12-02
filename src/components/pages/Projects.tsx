@@ -14,30 +14,66 @@ export const Projects = () => {
       src: sweetDreams,
       name: "Sweet Dreams",
       description: "Update later",
+      icons: [
+        "express",
+        "mysql",
+        "sequelize",
+        "nodejs",
+        "handlebars",
+        "git",
+        "dotenv",
+        "github",
+        "fontawesome",
+      ],
     },
     {
       id: uid(),
       src: vibeTogether,
       name: "Vibe Together",
       description: "Update later",
+      icons: ["nodejs", "html", "css", "bulma", "js", "git", "github"],
     },
     {
       id: uid(),
       src: weatherTracker,
       name: "Track Weather",
       description: "Update later",
+      icons: ["js", "nodejs", "github", "css", "html", "git"],
     },
     {
       id: uid(),
       src: crownClothing,
       name: "Crown Clothing",
       description: "Update later",
+      icons: [
+        "typescript",
+        "react",
+        "redux",
+        "stripe",
+        "firebase",
+        "reactrouter",
+        "github",
+        "git",
+        "netlify",
+        "apollo",
+        "graphql",
+      ],
     },
     {
       id: uid(),
       src: todoList,
       name: "TodoList App",
       description: "Update later",
+      icons: [
+        "github",
+        "react",
+        "typescript",
+        "axios",
+        "reactrouter",
+        "redux",
+        "mui",
+        "git",
+      ],
     },
   ];
 
@@ -48,6 +84,7 @@ export const Projects = () => {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
+        backgroundColor: "#7c7b75",
       }}
     >
       <Grid container marginTop={10} padding="10px 10px">
@@ -57,6 +94,8 @@ export const Projects = () => {
               name={project.name}
               description={project.description}
               src={project.src}
+              icons={project.icons}
+              id={project.id}
             />
           </Grid>
         ))}
