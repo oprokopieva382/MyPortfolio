@@ -9,8 +9,6 @@ export const ChillOfficeBox = styled.div`
   height: 100vh;
   background-image: url(${chillOffice});
   background-size: cover;
-  z-index: -1;
-  opacity: 0.7;
-
-
+  background-attachment: scroll;
+  opacity: 0.6;
 `;

@@ -13,19 +13,28 @@ type ProjectCardPropsType = {
   src: string;
 };
 
-export const ProjectCard: FC<ProjectCardPropsType> = ({ src, description, name }) => {
+export const ProjectCard: FC<ProjectCardPropsType> = ({
+  src,
+  description,
+  name,
+}) => {
   const theme = useTheme();
   return (
-    <>
+    <div style={{ marginBottom: 40 }}>
       <Card
         sx={{
-          maxWidth: 300,
-          maxHeight: 270,
-          boxShadow: theme.shadows[6],
-          marginTop: 10
+          maxWidth: 370,
+          maxHeight: 310,
+          boxShadow: theme.shadows[10],
+          margin: "0 auto",
         }}
       >
-        <CardMedia sx={{ height: 180 }} image={src} title={name} />
+        <CardMedia
+          component="img"
+          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          image={src}
+          alt={name}
+        />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {name}
@@ -35,8 +44,6 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({ src, description, name }
           </Typography>
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 };
-
-

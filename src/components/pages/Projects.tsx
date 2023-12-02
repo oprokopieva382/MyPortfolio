@@ -6,8 +6,6 @@ import todoList from "../../assets/img/todoListApp.png";
 import { uid } from "uid";
 import { ProjectCard } from "../ProjectCard";
 import { Box, Grid } from "@mui/material";
-import { ChillOfficeBox} from "../../style/ProjectStyle";
-
 
 export const Projects = () => {
   const projects = [
@@ -44,21 +42,17 @@ export const Projects = () => {
   ];
 
   return (
-    <Box>
-      <ChillOfficeBox />
-      <Grid container justifyContent="center">
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <Grid container marginTop={10} padding="10px 10px">
         {projects.map((project) => (
-          <Grid
-            key={project.id}
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            lg={3}
-            sx={{
-              marginLeft: 15,
-            }}
-          >
+          <Grid key={project.id} item xs={12} sm={6} md={4} lg={3}>
             <ProjectCard
               name={project.name}
               description={project.description}
