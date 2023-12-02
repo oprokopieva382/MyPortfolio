@@ -13,7 +13,8 @@ export const Projects = () => {
       id: uid(),
       src: sweetDreams,
       name: "Sweet Dreams",
-      description: "Update later",
+      description:
+        "Struggling to get a good night's sleep? Sweet Dreams app can be a helpful tool for improving sleep quality and overall health and well-being.",
       icons: [
         "express",
         "mysql",
@@ -30,21 +31,23 @@ export const Projects = () => {
       id: uid(),
       src: vibeTogether,
       name: "Vibe Together",
-      description: "Update later",
+      description:
+        "Stay up to date with upcoming concerts and festivals in USA, based on your preference. Use our Artist Bio to know more about your favorite artist. Let's Vibe Together!",
       icons: ["nodejs", "html", "css", "bulma", "js", "git", "github"],
     },
     {
       id: uid(),
       src: weatherTracker,
       name: "Track Weather",
-      description: "Update later",
+      description:
+        "Check real time weather condition local or in any other city all over the world. Take care of your plans during vacation and app take care of weather tracking.",
       icons: ["js", "nodejs", "github", "css", "html", "git"],
     },
     {
       id: uid(),
       src: crownClothing,
       name: "Crown Clothing",
-      description: "Update later",
+      description: "E-commerce clothing adaptive website",
       icons: [
         "typescript",
         "react",
@@ -63,7 +66,8 @@ export const Projects = () => {
       id: uid(),
       src: todoList,
       name: "TodoList App",
-      description: "Update later",
+      description:
+        "Keep track todo list by prioritise and manage your tasks, improve time management as well as workflow",
       icons: [
         "github",
         "react",
@@ -84,7 +88,7 @@ export const Projects = () => {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
-        backgroundColor: "#7c7b75",
+        background: "linear-gradient(to right, #F7F8F8, #ACBB78)",
       }}
     >
       <Grid container marginTop={10} padding="10px 10px">
@@ -95,7 +99,6 @@ export const Projects = () => {
               description={project.description}
               src={project.src}
               icons={project.icons}
-              id={project.id}
             />
           </Grid>
         ))}

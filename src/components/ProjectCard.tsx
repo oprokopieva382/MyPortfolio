@@ -28,7 +28,7 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
       <Card
         sx={{
           maxWidth: 370,
-          maxHeight: 310,
+          maxHeight: 400,
           boxShadow: theme.shadows[15],
           margin: "0 auto",
         }}
@@ -43,7 +43,7 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
           <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{fontSize: 17}}>
             {description}
           </Typography>
           <UsedTools icons={icons} />

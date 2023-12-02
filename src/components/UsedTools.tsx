@@ -62,7 +62,7 @@ const getIconComponent = (icon: string): IconType | null => {
 };
 
 export const UsedTools: FC<UserToolsPropsType> = ({ icons}) => (
-  <Box display="flex" alignItems="center">
+  <Box sx={{display: "flex", alignItems: "center", marginTop: 2 }}>
     {icons.map((icon) => {
       const IconComponent = getIconComponent(icon);
 
