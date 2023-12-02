@@ -29,8 +29,8 @@ export const Error = () => {
           color: "white",
         }}
       >
-        <Typography>Page is not found</Typography>
-      </Box>
+        <Typography>Page is not found</Typography> 
+      </Box> 
     </Box>
   );
 };
