@@ -1,9 +1,16 @@
-import { Box, Typography } from "@mui/material";
 import video from "../../assets/video/aboutBackground.mp4";
+import { UniversalBoxContainer } from "../../style/UniversalStyle";
+import {
+  ContentContainer,
+  TypographyH2,
+  TypographyH3,
+  TypographyH4,
+  TypographyH5,
+} from "../../style/HomeStyle";
 
 export const Home = () => {
   return (
-    <Box>
+    <>
       <video
         autoPlay
         loop
@@ -16,40 +23,18 @@ export const Home = () => {
           display: "block",
         }}
       />
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <Box
-          sx={{
-            maxWidth: "40%",
-            minWidth: "400px",
-            backgroundColor: "rgba(63, 62, 62, 0.5)",
-            borderRadius: "8px",
-            padding: 10,
-          }}
-        >
-          <Typography sx={{ fontSize: "20px" }}>It's me,</Typography>
-          <Typography sx={{ fontSize: "40px" }}>Oksana</Typography>
-          <Typography sx={{ fontSize: "27px" }}>
-            Full Stack Developer (MERN)
-          </Typography>
-          <Typography sx={{ marginTop: "3%", fontSize: 17 }}>
+      <UniversalBoxContainer>
+        <ContentContainer>
+          <TypographyH4>It's me,</TypographyH4>
+          <TypographyH2>Oksana</TypographyH2>
+          <TypographyH3>Full Stack Developer (MERN)</TypographyH3>
+          <TypographyH5>
             Believe, it's so important to keep work and rest in a balance, that
             is why live yoga lifestyle and in a free time enjoying exploring the
             Nature, so if you can't find me here, you definitely find me there🤍
-          </Typography>
-        </Box>
-      </Box>
-    </Box>
+          </TypographyH5>
+        </ContentContainer>
+      </UniversalBoxContainer>
+    </>
   );
 };
