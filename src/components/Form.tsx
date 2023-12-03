@@ -3,6 +3,7 @@ import { TextField, Button, Container, Typography, Box } from "@mui/material";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import SendIcon from "@mui/icons-material/Send";
+import { sendEmail } from "../utils/emailHandler";
 
 const schema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -19,6 +20,10 @@ const schema = z.object({
 
 export type ExpenseFormData = z.infer<typeof schema>;
 
+// const EMAIL_JS_USER_ID = "K9d0MnlrcSnLZdMNR";
+// const EMAIL_JS_TEMPLATE_ID = "template_oy0kp1s";
+// const EMAIL_JS_SERVICE_ID = "service_t8ppu7k";
+
 export const Form = () => {
   const {
     register,
@@ -26,6 +31,8 @@ export const Form = () => {
     reset,
     formState: { errors },
   } = useForm<ExpenseFormData>({ resolver: zodResolver(schema) });
+
+
 
   return (
     <Container component="main" maxWidth="sm">
@@ -49,7 +56,7 @@ export const Form = () => {
         <Box
           component="form"
           onSubmit={handleSubmit((data) => {
-            console.log(data);
+            sendEmail(data);
             reset();
           })}
           sx={{

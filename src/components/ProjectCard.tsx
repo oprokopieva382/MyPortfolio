@@ -27,8 +27,8 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
     <div style={{ marginBottom: 40 }}>
       <Card
         sx={{
-          maxWidth: 370,
-          maxHeight: 400,
+          maxWidth: 450,
+          maxHeight: 420,
           boxShadow: theme.shadows[15],
           margin: "0 auto",
         }}
