@@ -31,9 +31,9 @@ export const Home = () => {
       >
         <Box
           sx={{
-            maxWidth: "50%",
-            minWidth: "500px",
-            backgroundColor: "rgba(43, 42, 42, 0.5)",
+            maxWidth: "40%",
+            minWidth: "400px",
+            backgroundColor: "rgba(63, 62, 62, 0.5)",
             borderRadius: "8px",
             padding: 10,
           }}

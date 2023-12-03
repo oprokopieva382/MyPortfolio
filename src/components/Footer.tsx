@@ -1,13 +1,9 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { styled, IconButton } from "@mui/material";
-
-const ExternalLink = styled("a")({
-  color: "#fff",
-  textDecoration: "none",
-});
+import { FooterIcon } from "./reusableComponents/FooterIcon";
 
 export const Footer = () => {
+  const gitHub= "https://github.com/oprokopieva382";
+  const linkedin= "https://www.linkedin.com/in/oksana-prokopieva/";
+
   return (
     <div
       style={{
@@ -23,26 +19,8 @@ export const Footer = () => {
         padding: "8px 0",
       }}
     >
-      <ExternalLink
-        href="https://github.com/oprokopieva382"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IconButton
-          sx={{ padding: 0}}
-        >
-          <GitHubIcon sx={{ color: "#fff", fontSize: 30 }} />
-        </IconButton>
-      </ExternalLink>
-      <ExternalLink
-        href="https://www.linkedin.com/in/oksana-prokopieva/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IconButton sx={{ padding: 0 }}>
-          <LinkedInIcon sx={{ color: "#fff", fontSize: 30 }} />
-        </IconButton>
-      </ExternalLink>
+      <FooterIcon hrefinfo={gitHub} icon="GitHub" />
+      <FooterIcon hrefinfo={linkedin} icon="LinkedIn" />
     </div>
   );
 };

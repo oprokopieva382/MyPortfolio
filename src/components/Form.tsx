@@ -3,6 +3,8 @@ import { TextField, Button, Container, Typography, Box } from "@mui/material";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import SendIcon from "@mui/icons-material/Send";
+import { sendEmail } from "../utils/emailHandler";
+import { ToastContainer} from "react-toastify";
 
 const schema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -27,6 +29,8 @@ export const Form = () => {
     formState: { errors },
   } = useForm<ExpenseFormData>({ resolver: zodResolver(schema) });
 
+
+
   return (
     <Container component="main" maxWidth="sm">
       <Box
@@ -49,7 +53,7 @@ export const Form = () => {
         <Box
           component="form"
           onSubmit={handleSubmit((data) => {
-            console.log(data);
+            sendEmail(data);
             reset();
           })}
           sx={{
@@ -119,6 +123,7 @@ export const Form = () => {
           </Box>
         </Box>
       </Box>
+      <ToastContainer />
     </Container>
   );
 };

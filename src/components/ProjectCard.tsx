@@ -6,37 +6,49 @@ import {
   useTheme,
 } from "@mui/material";
 import { FC } from "react";
+import { UsedTools } from "./UsedTools";
+
 
 type ProjectCardPropsType = {
   name: string;
   description: string;
   src: string;
+  icons: string[]
 };
 
-export const ProjectCard: FC<ProjectCardPropsType> = ({ src, description, name }) => {
+export const ProjectCard: FC<ProjectCardPropsType> = ({
+  src,
+  description,
+  name,
+  icons
+}) => {
   const theme = useTheme();
   return (
-    <>
+    <div style={{ marginBottom: 40 }}>
       <Card
         sx={{
-          maxWidth: 300,
-          maxHeight: 270,
-          boxShadow: theme.shadows[6],
-          marginTop: 10
+          maxWidth: 450,
+          maxHeight: 420,
+          boxShadow: theme.shadows[15],
+          margin: "0 auto",
         }}
       >
-        <CardMedia sx={{ height: 180 }} image={src} title={name} />
+        <CardMedia
+          component="img"
+          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          image={src}
+          alt={name}
+        />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{fontSize: 17}}>
             {description}
           </Typography>
+          <UsedTools icons={icons} />
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 };
-
-

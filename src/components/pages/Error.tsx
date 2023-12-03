@@ -29,7 +29,7 @@ export const Error = () => {
           color: "white",
         }}
       >
-        <Typography>Page is not found</Typography> 
+        <Typography>Page not found</Typography> 
       </Box> 
     </Box>
   );
