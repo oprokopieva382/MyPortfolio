@@ -37,7 +37,6 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
         <CardMediaWrapper>
           <CardMedia component="img" image={src} alt={name} />
         </CardMediaWrapper>
-
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {name}

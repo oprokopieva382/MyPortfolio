@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import error from "../../assets/video/error.mp4";
 import { UniversalBoxContainer } from "../../style/UniversalStyle";
 
@@ -17,8 +17,7 @@ export const Error = () => {
           display: "block",
         }}
       />
-      <UniversalBoxContainer
-      >
+      <UniversalBoxContainer>
         <Typography>Page not found</Typography> 
       </UniversalBoxContainer> 
     </>

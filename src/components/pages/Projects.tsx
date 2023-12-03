@@ -1,7 +1,7 @@
 import { ProjectCard } from "../ProjectCard";
-import { Grid } from "@mui/material";
 import projects from "../../data/projectData.tsx";
 import { ProjectsContainer } from "../../style/ProjectStyle.tsx";
+import Grid from "@mui/material/Grid";
 
 export const Projects = () => {
   return (
