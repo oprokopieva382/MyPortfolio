@@ -6,8 +6,7 @@ export const Footer = () => {
   const linkedin= "https://www.linkedin.com/in/oksana-prokopieva/";
 
   return (
-    <FooterContainer
-    >
+    <FooterContainer>
       <FooterIcon hrefinfo={gitHub} icon="GitHub" />
       <FooterIcon hrefinfo={linkedin} icon="LinkedIn" />
     </FooterContainer>

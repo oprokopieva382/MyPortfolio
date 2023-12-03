@@ -18,7 +18,7 @@ export const FooterContainer = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: "rgba(43, 42, 42, 0.5)";
+  background-color: rgba(43, 42, 42, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
