@@ -17,7 +17,6 @@ export const sendEmail = async (data: ExpenseFormData) => {
       EMAIL_JS_USER_ID
     );
     successMessage();
-    console.log("Email sent successfully");
   } catch (error) {
     errorMessage();
     console.error("Error sending email:", error);
