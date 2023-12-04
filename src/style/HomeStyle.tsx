@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 
 export const ContentContainer = styled(Box)`
   max-width: 40%;
-  min-width: 400px;
+  min-width: 370px;
   background-color: rgba(63, 62, 62, 0.5);
   border-radius: 8px;
   padding: 10px;
