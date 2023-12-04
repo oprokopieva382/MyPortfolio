@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { TextField, Container, Typography, Box } from "@mui/material";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import SendIcon from "@mui/icons-material/Send";
@@ -12,6 +11,10 @@ import {
   FormFieldsBox,
   FormTitle,
 } from "../style/Contact";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 const schema = z.object({
   name: z.string().min(1, { message: "Name is required" }),

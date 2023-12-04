@@ -1,4 +1,7 @@
-import { Box, Card, Link, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 export const ProjectsContainer = styled(Box)`
