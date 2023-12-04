@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
 import contactMe from "../../assets/video/contactMe.mp4";
 import { Form } from "../Form";
+import { UniversalBoxContainer } from "../../style/UniversalStyle";
 
 export const Contact = () => {
   return (
-    <Box>
+    <>
       <video
         autoPlay
         loop
@@ -17,20 +17,9 @@ export const Contact = () => {
           display: "block",
         }}
       />
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          }}
-      >
+      <UniversalBoxContainer>
         <Form />
-      </Box>
-    </Box>
+      </UniversalBoxContainer>
+    </>
   );
 };

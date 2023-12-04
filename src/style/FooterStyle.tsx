@@ -1,3 +1,4 @@
+import IconButton from "@mui/material/IconButton";
 import styled from "styled-components";
 
 export const ExternalLink = styled.a`
@@ -7,9 +8,26 @@ export const ExternalLink = styled.a`
 
 export const IconStyle = styled.div`
   color: #fff;
-  font-size: 30px;
+  font-size: 35px;
 
   &:hover {
     color: #9ccc65;
   }
+`;
+
+export const FooterContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(43, 42, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  padding: 0;
+`;
+
+export const FooterIconButton = styled(IconButton)`
+  padding: 0;
 `;

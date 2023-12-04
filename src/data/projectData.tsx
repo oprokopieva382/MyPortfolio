@@ -23,6 +23,8 @@ const projects = [
       "github",
       "fontawesome",
     ],
+    source: "https://github.com/oprokopieva382/sweetDreams",
+    deploy: "https://sweetdreamsproject-8e54b05db96b.herokuapp.com/",
   },
   {
     id: uid(),
@@ -31,6 +33,8 @@ const projects = [
     description:
       "Stay up to date with upcoming concerts and festivals in USA, based on your preference. Use our Artist Bio to know more about your favorite artist. Let's Vibe Together!",
     icons: ["nodejs", "html", "css", "bulma", "js", "git", "github"],
+    source: "https://github.com/oprokopieva382/vibeTogether",
+    deploy: "https://oprokopieva382.github.io/vibeTogether/",
   },
   {
     id: uid(),
@@ -39,6 +43,8 @@ const projects = [
     description:
       "Check real-time weather condition local or in any other city all over the world. Take care of your plans during vacation and app take care of weather tracking.",
     icons: ["js", "nodejs", "github", "css", "html", "git"],
+    source: "https://github.com/oprokopieva382/WeatherDashboard",
+    deploy: "https://oprokopieva382.github.io/WeatherDashboard/",
   },
   {
     id: uid(),
@@ -58,6 +64,8 @@ const projects = [
       "apollo",
       "graphql",
     ],
+    source: "https://github.com/oprokopieva382/crwn-clothing",
+    deploy: "https://crown-clothing-usa.netlify.app/",
   },
   {
     id: uid(),
@@ -75,6 +83,8 @@ const projects = [
       "mui",
       "git",
     ],
+    source: "https://github.com/oprokopieva382/todolistApp/tree/main",
+    deploy: "https://oprokopieva382.github.io/todolistApp/",
   },
 ];
 

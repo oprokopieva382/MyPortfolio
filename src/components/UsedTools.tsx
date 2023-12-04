@@ -24,7 +24,8 @@ import { SiMui } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { FC } from "react";
-import { Box, Icon } from "@mui/material";
+import { Icon } from "@mui/material";
+import { UsedToolsContainer } from "../style/ProjectStyle";
 
 type UserToolsPropsType = {
   icons: string[];
@@ -61,11 +62,10 @@ const getIconComponent = (icon: string): IconType | null => {
   return iconMap[icon] || null;
 };
 
-export const UsedTools: FC<UserToolsPropsType> = ({ icons}) => (
-  <Box sx={{display: "flex", alignItems: "center", marginTop: 2 }}>
+export const UsedTools: FC<UserToolsPropsType> = ({ icons }) => (
+  <UsedToolsContainer>
     {icons.map((icon) => {
       const IconComponent = getIconComponent(icon);
-
       if (IconComponent) {
         return (
           <Icon
@@ -78,9 +78,7 @@ export const UsedTools: FC<UserToolsPropsType> = ({ icons}) => (
           />
         );
       }
-
       return null;
     })}
-  </Box>
+  </UsedToolsContainer>
 );
-

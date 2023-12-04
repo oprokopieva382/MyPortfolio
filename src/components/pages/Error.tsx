@@ -1,9 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import error from "../../assets/video/error.mp4";
+import { UniversalBoxContainer } from "../../style/UniversalStyle";
 
 export const Error = () => {
   return (
-    <Box>
+    <>
       <video
         autoPlay
         loop
@@ -16,21 +17,9 @@ export const Error = () => {
           display: "block",
         }}
       />
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
+      <UniversalBoxContainer>
         <Typography>Page not found</Typography> 
-      </Box> 
-    </Box>
+      </UniversalBoxContainer> 
+    </>
   );
 };

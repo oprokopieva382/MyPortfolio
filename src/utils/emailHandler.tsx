@@ -1,6 +1,6 @@
 import { ExpenseFormData } from "../components/Form";
 import emailjs from "@emailjs/browser";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const EMAIL_JS_USER_ID = import.meta.env.VITE_REACT_APP_EMAIL_JS_USER_ID;

@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import {
-  AppBar,
-  Box,
-  Button,
-  CssBaseline,
-  Drawer,
-  IconButton,
-  ListItem,
-  Toolbar,
-} from "@mui/material";
+import { CssBaseline, Drawer, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AudioPlayer } from "./AudioPlayer";
+import {
+  AudioPlayerContainer,
+  NavBarButtonContainer,
+  NavBarButtonScreenView,
+  NavBarContainer,
+  NavBarContainerMobileView,
+  StyledAppBar,
+  StyledIconButton,
+} from "../style/NavBarStyle";
+import { MobileNavLink } from "./reusableComponents/MobileNavLink";
+import { FullScreenNavLink } from "./reusableComponents/FullScreenNavLink";
 
 export const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,105 +21,54 @@ export const NavBar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const renderNavLink = (to: string, label: string) => (
-    <Link to={to} style={{ textDecoration: "none" }}>
-      <Button
-        variant="contained"
-        color="primary"
-        sx={{
-          margin: 1,
-          backgroundColor: "rgba(156, 204, 101, 0.2)",
-          "&:hover": {
-            backgroundColor: "rgba(156, 204, 101, 0.6)",
-          },
-        }}
-      >
-        {label}
-      </Button>
-    </Link>
-  );
-
   return (
-    <Box sx={{ display: "flex" }}>
+    <NavBarContainer>
       <CssBaseline />
-      <AppBar
-        component="nav"
-        sx={{ backgroundColor: "transparent", position: "fixed" }}
-      >
+      <StyledAppBar>
         <Toolbar>
-          <IconButton
+          <StyledIconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleMobileMenuToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
-          <Box sx={{ marginLeft: "20px" }}>
+          </StyledIconButton>
+          <AudioPlayerContainer>
             <AudioPlayer />
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              flexGrow: 1,
-            }}
-          >
-            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-              {renderNavLink("/", "About")}
-              {renderNavLink("/projects", "Projects")}
-              {renderNavLink("/contact", "Contact")}
-            </Box>
-          </Box>
+          </AudioPlayerContainer>
+          <NavBarButtonContainer>
+            <NavBarButtonScreenView>
+              <FullScreenNavLink to="/" label="About" />
+              <FullScreenNavLink to="/projects" label="Projects" />
+              <FullScreenNavLink to="/contact" label="Contact" />
+            </NavBarButtonScreenView>
+          </NavBarButtonContainer>
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
       <Drawer
         anchor="left"
         open={mobileMenuOpen}
         onClose={handleMobileMenuToggle}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: "rgba(156, 204, 101, 0.6)",
-            height: "100%",
-            alignItems: "center",
-          }}
-        >
-          <NavLink
+        <NavBarContainerMobileView>
+          <MobileNavLink
             to="/"
-            style={{
-              textDecoration: "none",
-              color: "#fff",
-              width: "100%",
-              padding: "10px 0",
-            }}
-          >
-            <ListItem button onClick={handleMobileMenuToggle}>
-              About
-            </ListItem>
-          </NavLink>
-          <NavLink
+            callback={handleMobileMenuToggle}
+            linkname="About"
+          />
+          <MobileNavLink
             to="/projects"
-            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
-          >
-            <ListItem button onClick={handleMobileMenuToggle}>
-              Projects
-            </ListItem>
-          </NavLink>
-          <NavLink
+            callback={handleMobileMenuToggle}
+            linkname="Projects"
+          />
+          <MobileNavLink
             to="/contact"
-            style={{ textDecoration: "none", color: "#fff", padding: "10px 0" }}
-          >
-            <ListItem button onClick={handleMobileMenuToggle}>
-              Contact
-            </ListItem>
-          </NavLink>
-        </Box>
+            callback={handleMobileMenuToggle}
+            linkname="Contact"
+          />
+        </NavBarContainerMobileView>
       </Drawer>
-    </Box>
+    </NavBarContainer>
   );
 };
