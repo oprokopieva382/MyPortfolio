@@ -25,7 +25,7 @@ export const ProjectCardTypography = styled(Typography)`
 
 export const CardWrapper = styled(Card)`
   max-width: 450px;
-  max-height: 420px;
+  max-height: 470px;
   margin: 0 auto;
 `;
 
