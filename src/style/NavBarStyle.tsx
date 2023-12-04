@@ -1,6 +1,9 @@
-import { AppBar, Box, Button, IconButton } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { styled } from "@mui/system";
+import Box from "@mui/material/Box";
+import AppBar from "@mui/material/AppBar";
+import IconButton from "@mui/material/IconButton";
+import Button from "@mui/material/Button";
 
 export const NavBarContainer = styled(Box)`
   display: flex;
