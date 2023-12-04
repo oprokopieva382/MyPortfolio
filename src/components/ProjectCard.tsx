@@ -1,16 +1,13 @@
-import {
-  CardContent,
-  CardMedia,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { CardContent, CardMedia, Typography, useTheme } from "@mui/material";
 import { FC } from "react";
 import { UsedTools } from "./UsedTools";
 import {
   CardMediaWrapper,
   CardWrapper,
+  LinkBox,
   ProjectCardContainer,
   ProjectCardTypography,
+  ProjectLink,
 } from "../style/ProjectStyle";
 
 type ProjectCardPropsType = {
@@ -18,6 +15,8 @@ type ProjectCardPropsType = {
   description: string;
   src: string;
   icons: string[];
+  sourceCode: string;
+  deploy: string;
 };
 
 export const ProjectCard: FC<ProjectCardPropsType> = ({
@@ -25,6 +24,8 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
   description,
   name,
   icons,
+  sourceCode,
+  deploy,
 }) => {
   const theme = useTheme();
   return (
@@ -41,6 +42,14 @@ export const ProjectCard: FC<ProjectCardPropsType> = ({
           <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>
+          <LinkBox>
+            <ProjectLink href={sourceCode} target="_blank">
+              source
+            </ProjectLink>
+            <ProjectLink href={deploy} target="_blank">
+              deploy
+            </ProjectLink>
+          </LinkBox>
           <ProjectCardTypography variant="body2" color="text.secondary">
             {description}
           </ProjectCardTypography>

@@ -14,6 +14,8 @@ export const Projects = () => {
               description={project.description}
               src={project.src}
               icons={project.icons}
+              sourceCode={project.source}
+              deploy={project.deploy}
             />
           </Grid>
         ))}

@@ -1,4 +1,4 @@
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Link, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const ProjectsContainer = styled(Box)`
@@ -33,4 +33,22 @@ export const UsedToolsContainer = styled(Box)`
   display: flex;
   align-items: center;
   margin-top: 16px;
+`;
+
+export const LinkBox = styled(Box)`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
+export const ProjectLink = styled(Link)`
+  text-decoration: none;
+  color: #9ccc65;
+  padding-right: 25px;
+  font-size: 18px;
+  &:hover {
+    color: rgba(34, 44, 21, 0.6);
+    font-weight: bold;
+  }
 `;
