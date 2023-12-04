@@ -24,7 +24,7 @@ export const AudioPlayer = () => {
   const [checked, setChecked] = useState(false);
 
    useEffect(() => {
-     const audioElement = new Audio("/src/assets/audio/Lo-Fi-Chillhop.mp3");
+     const audioElement = new Audio("/audio/Lo-Fi-Chillhop.mp3");
      audioElement.loop = checked;
 
      const playAudio = () => {
