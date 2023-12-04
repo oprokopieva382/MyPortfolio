@@ -51,8 +51,7 @@ export const AudioPlayer = () => {
    }, [checked]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("Switch changed:", event.target.checked);
-    setChecked(event.target.checked);
+     setChecked(event.target.checked);
   };
 
   return (
