@@ -41,3 +41,8 @@ If you have any questions find me on [GitHub](https://github.com/oprokopieva382)
 
 ## Links
 Check it out on the [Netlify](https://drive.google.com/file/d/1H1lnx-mghxl40kM4t6JQ0154UC3uh-LI/view)
+
+## Screenshots
+![HomePage](public/screenshots/home.png)
+![ProjectsPage](public/screenshots/projects.png)
+![ContactPage](public/screenshots/contact.png)
