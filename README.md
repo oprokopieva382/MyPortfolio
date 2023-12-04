@@ -40,7 +40,7 @@ Please refer to the LICENSE in the repo.
 If you have any questions find me on [GitHub](https://github.com/oprokopieva382) or feel free email me oprokopieva382@gmail.com
 
 ## Links
-Check it out on the [Netlify](https://drive.google.com/file/d/1H1lnx-mghxl40kM4t6JQ0154UC3uh-LI/view)
+Check it out on the [Netlify](https://p-o-r-t-f-o-l-i-o-2023.netlify.app/)
 
 ## Screenshots
 ![HomePage](public/screenshots/home.png)
