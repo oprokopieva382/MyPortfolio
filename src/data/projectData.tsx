@@ -3,9 +3,32 @@ import vibeTogether from "../assets/img/vibeTogether.png";
 import weatherTracker from "../assets/img/weather.png";
 import crownClothing from "../assets/img/crownClothing.png";
 import todoList from "../assets/img/todoListApp.png";
+import LoveLink from "../assets/img/LoveLink.png";
 import { uid } from "uid";
 
 const projects = [
+  {
+    id: uid(),
+    src: LoveLink,
+    name: "LoveLink",
+    description:
+      "MERN project. Premier dating platform designed to bring people together based on shared interests and hobbies.",
+    icons: [
+      "express",
+      "react",
+      "apollo",
+      "graphql",
+      "nodejs",
+      "vite",
+      "mui",
+      "tensorflow",
+      "github",
+      "git",
+      "JWT",
+    ],
+    source: "https://github.com/oprokopieva382/Love-Link",
+    deploy: "https://hidden-garden-06286-72f8e54246d1.herokuapp.com/",
+  },
   {
     id: uid(),
     src: sweetDreams,

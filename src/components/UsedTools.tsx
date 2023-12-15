@@ -23,6 +23,9 @@ import { SiReactrouter } from "react-icons/si";
 import { SiMui } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { IconType } from "react-icons";
+import { SiVite } from "react-icons/si";
+import { SiTensorflow } from "react-icons/si";
+import { SiJsonwebtokens } from "react-icons/si";
 import { FC } from "react";
 import { Icon } from "@mui/material";
 import { UsedToolsContainer } from "../style/ProjectStyle";
@@ -57,6 +60,9 @@ const getIconComponent = (icon: string): IconType | null => {
     graphql: SiGraphql,
     axios: SiAxios,
     mui: SiMui,
+    vite: SiVite,
+    tensorflow: SiTensorflow,
+    JWT: SiJsonwebtokens,
   };
 
   return iconMap[icon] || null;
