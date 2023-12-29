@@ -3,6 +3,7 @@ import vibeTogether from "../assets/img/vibeTogether.png";
 import weatherTracker from "../assets/img/weather.png";
 import crownClothing from "../assets/img/crownClothing.png";
 import todoList from "../assets/img/todoListApp.png";
+import gameHub from "../assets/img/gameHub.png";
 import LoveLink from "../assets/img/LoveLink.png";
 import { uid } from "uid";
 
@@ -61,6 +62,16 @@ const projects = [
   },
   {
     id: uid(),
+    src: gameHub,
+    name: "Game Hub",
+    description:
+      "The app aims to enhance the gaming experience by offering a streamlined platform for discovering new and exciting games.",
+    icons: ["vite", "mui", "html", "css", "js", "git", "react", "github"],
+    source: "https://github.com/oprokopieva382/gameHubApp",
+    deploy: "https://game-hub-2023.vercel.app/",
+  },
+  {
+    id: uid(),
     src: weatherTracker,
     name: "Track Weather",
     description:
@@ -73,7 +84,8 @@ const projects = [
     id: uid(),
     src: crownClothing,
     name: "Crown Clothing",
-    description: "E-commerce clothing adaptive website",
+    description:
+      "E-commerce clothing store. Discover the latest trends and elevate your style with Crown Clothing. 'Crown Clothing - where trends meet convenience.'",
     icons: [
       "typescript",
       "react",
@@ -95,7 +107,7 @@ const projects = [
     src: todoList,
     name: "TodoList App",
     description:
-      "Keep track todo list by prioritise and manage your tasks, improve time management as well as workflow",
+      "Keep track todo list by prioritise and manage your tasks, improve time management as well as workflow.",
     icons: [
       "github",
       "react",
