@@ -5,9 +5,33 @@ import crownClothing from "../assets/img/crownClothing.png";
 import todoList from "../assets/img/todoListApp.png";
 import gameHub from "../assets/img/gameHub.png";
 import LoveLink from "../assets/img/LoveLink.png";
+import jobHunt from "../assets/img/jobHunt.png";
 import { uid } from "uid";
 
 const projects = [
+  {
+    id: uid(),
+    src: jobHunt,
+    name: "Jon Hunt",
+    description:
+      "Full Stack Project. Optimize a streamlined job search experience with all-in-one app designed to manage applications seamlessly.",
+    icons: [
+      "express",
+      "react",
+      "mongoose",
+      "mongoDB",
+      "axios",
+      "nodejs",
+      "vite",
+      "styled-components",
+      "JWT",
+      "js",
+      "github",
+      "git",
+    ],
+    source: "https://github.com/oprokopieva382/JobHunt",
+    deploy: "https://job-hunt-app.onrender.com/",
+  },
   {
     id: uid(),
     src: LoveLink,
