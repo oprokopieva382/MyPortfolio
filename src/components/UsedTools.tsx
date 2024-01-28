@@ -26,6 +26,8 @@ import { IconType } from "react-icons";
 import { SiVite } from "react-icons/si";
 import { SiTensorflow } from "react-icons/si";
 import { SiJsonwebtokens } from "react-icons/si";
+import { SiMongoose } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 import { FC } from "react";
 import { Icon } from "@mui/material";
 import { UsedToolsContainer } from "../style/ProjectStyle";
@@ -47,6 +49,8 @@ const getIconComponent = (icon: string): IconType | null => {
     fontawesome: FaRegFontAwesome,
     html: FaHtml5,
     css: FaCss3,
+    mongoose: SiMongoose,
+    mongoDB: DiMongodb,
     bulma: SiBulma,
     js: IoLogoJavascript,
     typescript: SiTypescript,
