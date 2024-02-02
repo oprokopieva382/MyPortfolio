@@ -50,7 +50,13 @@ export const StyledButton = styled(Button)`
 export const StyledBoxButtons = styled(Box)`
   display: flex;
   justify-content: space-around;
-  padding: 0 35%;
+  padding: 0 33%;
   padding-top: 62vh;
   flex-wrap: wrap;
+  @media (max-width: 450px) {
+    padding: 70% 30%;
+  }
+  @media (max-width: 375px) {
+    padding: 70% 29%;
+  }
 `;
