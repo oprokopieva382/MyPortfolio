@@ -43,7 +43,7 @@ export const StyledButton = styled(Button)`
     color: white;
   }
   svg {
-    margin-right: 8px; 
+    margin-right: 8px;
   }
 `;
 
@@ -54,9 +54,9 @@ export const StyledBoxButtons = styled(Box)`
   padding-top: 62vh;
   flex-wrap: wrap;
   @media (max-width: 450px) {
-    padding: 70% 30%;
+    padding: 85% 30%;
   }
   @media (max-width: 375px) {
-    padding: 70% 29%;
+    padding: 85% 29%;
   }
 `;
