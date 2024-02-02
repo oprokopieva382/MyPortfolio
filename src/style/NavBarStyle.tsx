@@ -60,8 +60,8 @@ export const FullScreenStyledNavLink = styled(NavLink)`
 
 export const FullScreenNavLinkButton = styled(Button)`
   margin: 8px;
-  background-color: rgba(156, 204, 101, 0.2);
+  background-color: rgba(156, 204, 101, 0.4);
   &:hover {
-    background-color: rgba(156, 204, 101, 0.6);
+    background-color: rgba(156, 204, 101, 0.7);
   }
 `;
