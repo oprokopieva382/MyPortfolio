@@ -35,6 +35,7 @@ const skills = [
 
 export const Greeting = () => {
   const navigate = useNavigate();
+
   const handleLinkedInNavigation = () => {
     window.open("https://www.linkedin.com/in/oksana-prokopieva/");
   };

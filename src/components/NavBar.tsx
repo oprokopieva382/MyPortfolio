@@ -39,9 +39,9 @@ export const NavBar = () => {
           </AudioPlayerContainer>
           <NavBarButtonContainer>
             <NavBarButtonScreenView>
-              <FullScreenNavLink to="/" label="About" />
-              <FullScreenNavLink to="/projects" label="Projects" />
-              <FullScreenNavLink to="/contact" label="Contact" />
+              <FullScreenNavLink to="/portfolio" label="About" />
+              <FullScreenNavLink to="/portfolio/projects" label="Projects" />
+              <FullScreenNavLink to="/portfolio/contact" label="Contact" />
             </NavBarButtonScreenView>
           </NavBarButtonContainer>
         </Toolbar>
