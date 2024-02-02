@@ -12,7 +12,7 @@ const projects = [
   {
     id: uid(),
     src: jobHunt,
-    name: "Jon Hunt",
+    name: "Job Hunt",
     description:
       "Full Stack Project. Optimize a streamlined job search experience with all-in-one app designed to manage applications seamlessly.",
     icons: [
