@@ -7,6 +7,7 @@ import {
 } from "../../style/GreetingStyle";
 import { PiLinkedinLogoLight } from "react-icons/pi";
 import { PiFolderUserThin } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 const skills = [
   "React.js",
@@ -33,6 +34,13 @@ const skills = [
 ];
 
 export const Greeting = () => {
+  const navigate = useNavigate();
+  const handleLinkedInNavigation = () => {
+    window.open("https://www.linkedin.com/in/oksana-prokopieva/");
+  };
+  const handlePortfolioNavigation = () => {
+    navigate("/portfolio");
+  };
   return (
     <>
       <StyledContainer>
@@ -42,11 +50,11 @@ export const Greeting = () => {
           })}
         </StyledBoxSkills>
         <StyledBoxButtons>
-          <StyledButton>
+          <StyledButton onClick={handleLinkedInNavigation}>
             <PiLinkedinLogoLight size="1.5em" />
             LinkedIn
           </StyledButton>
-          <StyledButton>
+          <StyledButton onClick={handlePortfolioNavigation}>
             <PiFolderUserThin size="1.5em" />
             Portfolio
           </StyledButton>
