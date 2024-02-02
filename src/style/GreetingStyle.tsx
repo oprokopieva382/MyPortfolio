@@ -54,9 +54,9 @@ export const StyledBoxButtons = styled(Box)`
   padding-top: 62vh;
   flex-wrap: wrap;
   @media (max-width: 450px) {
-    padding: 85% 30%;
+    padding: 87% 30%;
   }
   @media (max-width: 375px) {
-    padding: 85% 29%;
+    padding: 87% 29%;
   }
 `;
