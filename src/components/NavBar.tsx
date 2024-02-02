@@ -53,17 +53,17 @@ export const NavBar = () => {
       >
         <NavBarContainerMobileView>
           <MobileNavLink
-            to="/"
+            to="/portfolio"
             callback={handleMobileMenuToggle}
             linkname="About"
           />
           <MobileNavLink
-            to="/projects"
+            to="/portfolio/projects"
             callback={handleMobileMenuToggle}
             linkname="Projects"
           />
           <MobileNavLink
-            to="/contact"
+            to="/portfolio/contact"
             callback={handleMobileMenuToggle}
             linkname="Contact"
           />
