@@ -33,10 +33,9 @@ export const StyledButton = styled(Button)`
   border: 1px solid white;
   border-radius: 35px;
   justify-content: center;
-  padding: 0.5% 2.2%;
   flex-wrap: wrap;
-  padding: 8px 21px;
-  margin-bottom: 10%;
+  padding: 7px 20px;
+  margin: 0px 8px 18px;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
   &:hover {
@@ -45,18 +44,45 @@ export const StyledButton = styled(Button)`
   svg {
     margin-right: 8px;
   }
+  @media (max-width: 593px) {
+    padding: 5px 17px;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 484px) {
+    padding: 5px 17px;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 5px 17px;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 5px 17px;
+    font-size: 0.6rem;
+    margin-bottom: 18px;
+  }
 `;
 
 export const StyledBoxButtons = styled(Box)`
   display: flex;
   justify-content: space-around;
-  padding: 0 33%;
-  padding-top: 62vh;
+  padding: 0 33vw;
+  padding-top: 49vh;
   flex-wrap: wrap;
-  @media (max-width: 450px) {
-    padding: 87% 30%;
+  @media (max-width: 948px) {
+    padding: 0 23vw;
+    padding-top: 49vh;
   }
+  @media (max-width: 450px) {
+    padding-top: 45vh;
+  }
+
   @media (max-width: 375px) {
-    padding: 87% 29%;
+    padding-top: 45vh;
   }
 `;
