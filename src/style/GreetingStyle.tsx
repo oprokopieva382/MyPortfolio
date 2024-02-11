@@ -10,6 +10,7 @@ export const StyledContainer = styled(Box)`
   background-position: center;
   width: 100%;
   height: 100vh;
+ 
 `;
 
 export const StyledBoxSkills = styled(Box)`

@@ -13,6 +13,7 @@ const projects = [
     id: uid(),
     src: jobHunt,
     name: "Job Hunt",
+    hash: "L8BDE000~qM{XTIUx]V@4o?HIT%M",
     description:
       "Full Stack Project. Optimize a streamlined job search experience with all-in-one app designed to manage applications seamlessly.",
     icons: [
@@ -36,6 +37,7 @@ const projects = [
     id: uid(),
     src: LoveLink,
     name: "LoveLink",
+    hash: "LPFiV_01%~sk?^IqtQkC%#kDX8og",
     description:
       "MERN project. Premier dating platform designed to bring people together based on shared interests and hobbies.",
     icons: [
@@ -58,6 +60,7 @@ const projects = [
     id: uid(),
     src: sweetDreams,
     name: "Sweet Dreams",
+    hash: "L6L}BEIU-;~qRj00IUWBM{t7WBM{",
     description:
       "Struggling to get a good night's sleep? Sweet Dreams app can be a helpful tool for improving sleep quality and overall health and well-being.",
     icons: [
@@ -78,6 +81,7 @@ const projects = [
     id: uid(),
     src: vibeTogether,
     name: "Vibe Together",
+    hash: "L24epQWA00xu8^t6.AIpj_RjW9xu",
     description:
       "Stay up to date with upcoming concerts and festivals in USA, based on your preference. Use our Artist Bio to know more about your favorite artist. Let's Vibe Together!",
     icons: ["nodejs", "html", "css", "bulma", "js", "git", "github"],
@@ -88,6 +92,7 @@ const projects = [
     id: uid(),
     src: gameHub,
     name: "Game Hub",
+    hash: "L59jia0p01RL4z?Y$^9I0cVGp2~o",
     description:
       "The app aims to enhance the gaming experience by offering a streamlined platform for discovering new and exciting games.",
     icons: ["vite", "mui", "html", "css", "js", "git", "react", "github"],
@@ -98,6 +103,7 @@ const projects = [
     id: uid(),
     src: weatherTracker,
     name: "Track Weather",
+    hash: "LAG9Kq.800?b00t7~qxuWBofkCkC",
     description:
       "Check real-time weather condition local or in any other city all over the world. Take care of your plans during vacation and app take care of weather tracking.",
     icons: ["js", "nodejs", "github", "css", "html", "git"],
@@ -108,6 +114,7 @@ const projects = [
     id: uid(),
     src: crownClothing,
     name: "Crown Clothing",
+    hash: "LpL4ytRP%Ms.%2fkWBof~qofWBWV",
     description:
       "E-commerce clothing store. Discover the latest trends and elevate your style with Crown Clothing. 'Crown Clothing - where trends meet convenience.'",
     icons: [
@@ -130,6 +137,7 @@ const projects = [
     id: uid(),
     src: todoList,
     name: "TodoList App",
+    hash: "L1R{.BM|~p_300Rjt7ay00-;4:M{",
     description:
       "Keep track todo list by prioritise and manage your tasks, improve time management as well as workflow.",
     icons: [
