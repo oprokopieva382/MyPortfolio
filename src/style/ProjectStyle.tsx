@@ -16,6 +16,14 @@ export const CardMediaWrapper = styled(Box)`
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(
+    to right,
+    #acbb78,
+    #f7f8f8
+  ); 
+  border-image-slice: 1;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.4);
 `;
 
 export const ProjectCardContainer = styled(Box)`

@@ -43,6 +43,7 @@ export const Greeting = () => {
     navigate("/portfolio");
   };
   return (
+    <>
       <StyledContainer>
         <StyledBoxSkills>
           {skills.map((skill, i) => {
@@ -60,5 +61,6 @@ export const Greeting = () => {
           </StyledButton>
         </StyledBoxButtons>
       </StyledContainer>
-   );
+    </>
+  );
 };
