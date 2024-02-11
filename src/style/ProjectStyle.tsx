@@ -23,7 +23,7 @@ export const CardMediaWrapper = styled(Box)`
     #f7f8f8
   ); 
   border-image-slice: 1;
-  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.3);
 `;
 
 export const ProjectCardContainer = styled(Box)`
